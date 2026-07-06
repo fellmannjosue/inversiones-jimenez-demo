@@ -6,14 +6,15 @@
 <title>Inversiones Jiménez · Boutique</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <style>
 :root{
-  --ink:#1a1815; --ink-soft:#4a4640; --muted:#9b948a; --line:#e9e4dc; --line-2:#ded7cc;
-  --bg:#faf8f4; --surface:#ffffff; --gold:#a8894f; --gold-2:#c2a56b; --danger:#a13b30;
-  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Inter",system-ui,-apple-system,sans-serif;
-  --shadow:0 20px 50px -30px rgba(26,24,21,.4);
+  --ink:#181425; --ink-soft:#4b4560; --muted:#8b86a0; --line:#eee9f5; --line-2:#e3ddf2;
+  --bg:#f7f5fc; --surface:#ffffff; --gold:#7c3aed; --gold-2:#ec4899; --danger:#e11d48;
+  --grad:linear-gradient(135deg,#7c3aed,#ec4899); --grad-2:linear-gradient(135deg,#f97316,#ec4899);
+  --serif:"Poppins",system-ui,-apple-system,sans-serif; --sans:"Inter",system-ui,-apple-system,sans-serif;
+  --shadow:0 24px 60px -26px rgba(124,58,237,.42);
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;font-size:15px}
@@ -26,11 +27,11 @@ section{scroll-margin-top:90px}
 .eyebrow{font-size:.68rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:600}
 .serif{font-family:var(--serif)}
 h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:.01em;margin:0}
-.rule{width:52px;height:1px;background:var(--gold);margin:1rem auto}
+.rule{width:64px;height:4px;border-radius:4px;background:var(--grad);margin:1rem auto}
 .btn{display:inline-flex;align-items:center;gap:.5rem;border:0;cursor:pointer;font-size:.78rem;letter-spacing:.14em;
-  text-transform:uppercase;font-weight:600;padding:.85rem 1.6rem;transition:.2s;font-family:var(--sans)}
+  text-transform:uppercase;font-weight:600;padding:.85rem 1.6rem;transition:.2s;font-family:var(--sans);border-radius:999px}
 .btn-solid{background:var(--ink);color:#fff}.btn-solid:hover{background:#000}
-.btn-gold{background:var(--gold);color:#fff}.btn-gold:hover{background:var(--gold-2)}
+.btn-gold{background:var(--grad);color:#fff}.btn-gold:hover{filter:brightness(1.08)}
 .btn-out{background:transparent;border:1px solid var(--line-2);color:var(--ink)}.btn-out:hover{border-color:var(--ink)}
 .btn-wa{background:#128C4A;color:#fff}.btn-wa:hover{filter:brightness(1.08)}
 .btn:disabled{opacity:.45;cursor:not-allowed}
@@ -42,9 +43,9 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:.01em;margin:0}
 .sec-head p{color:var(--muted);margin:0}
 
 /* ANNOUNCEMENT + HEADER */
-.announce{background:var(--ink);color:#e7e0d4;text-align:center;font-size:.72rem;letter-spacing:.16em;
+.announce{background:var(--grad);color:#fff;text-align:center;font-size:.72rem;letter-spacing:.16em;
   text-transform:uppercase;padding:.55rem}
-.announce b{color:var(--gold-2)}
+.announce b{color:#ffe08a}
 header.top{position:sticky;top:0;z-index:40;background:rgba(250,248,244,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .top-in{display:flex;align-items:center;gap:1.2rem;height:74px}
 .brand{display:flex;align-items:center;gap:.65rem}
@@ -67,15 +68,15 @@ nav.menu a:hover{color:var(--gold)}
 @media(min-width:940px){nav.menu{display:flex}.search{display:block}}
 
 /* HERO */
-.hero{position:relative;overflow:hidden;background:var(--bg)}
+.hero{position:relative;overflow:hidden;background:radial-gradient(900px 520px at 92% -5%,rgba(236,72,153,.20),transparent 60%),radial-gradient(760px 520px at 0% 15%,rgba(124,58,237,.18),transparent 55%),var(--bg)}
 .hero-in{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;padding:4.5rem 0 4rem}
 .hero h1{font-size:clamp(2.6rem,6vw,4.4rem);line-height:1.02;font-weight:600;margin:1rem 0}
-.hero h1 em{font-style:italic;color:var(--gold)}
+.hero h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero p{color:var(--ink-soft);max-width:420px;margin:0 0 1.8rem;font-size:1.02rem}
 .hero .cta{display:flex;gap:.8rem;flex-wrap:wrap;align-items:center}
 .hero-media{position:relative}
-.hero-media img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(1) contrast(1.02)}
-.hero-media .frame{position:absolute;inset:14px;border:1px solid rgba(168,137,79,.6);pointer-events:none}
+.hero-media img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px}
+.hero-media .frame{position:absolute;inset:14px;border:2px solid rgba(236,72,153,.55);border-radius:14px;pointer-events:none}
 .hero-media .tagcard{position:absolute;left:-18px;bottom:34px;background:var(--surface);padding:1rem 1.2rem;box-shadow:var(--shadow);border-left:2px solid var(--gold)}
 .hero-media .tagcard .k{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
 .hero-media .tagcard .v{font-family:var(--serif);font-size:1.6rem}
@@ -91,10 +92,10 @@ nav.menu a:hover{color:var(--gold)}
 
 /* CATEGORIES */
 .cats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
-.cat-tile{position:relative;overflow:hidden;aspect-ratio:3/3.4;display:block;cursor:pointer}
-.cat-tile img{width:100%;height:100%;object-fit:cover;filter:grayscale(1);transition:.5s}
-.cat-tile:hover img{transform:scale(1.05);filter:grayscale(.4)}
-.cat-tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(20,18,15,.72))}
+.cat-tile{position:relative;overflow:hidden;aspect-ratio:3/3.4;display:block;cursor:pointer;border-radius:18px}
+.cat-tile img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.cat-tile:hover img{transform:scale(1.06)}
+.cat-tile::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,rgba(124,58,237,.30),rgba(24,20,37,.82))}
 .cat-tile .cap{position:absolute;left:0;right:0;bottom:0;padding:1.4rem;color:#fff;z-index:1}
 .cat-tile .cap .e{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-2)}
 .cat-tile .cap h3{font-size:1.7rem;margin:.2rem 0}
@@ -110,14 +111,14 @@ nav.menu a:hover{color:var(--gold)}
 .filters button.active::after{content:"";position:absolute;left:.7rem;right:.7rem;bottom:0;height:1px;background:var(--gold)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:2rem 1.6rem}
 .pc{display:flex;flex-direction:column}
-.pc__media{position:relative;overflow:hidden;aspect-ratio:1/1;background:#f0ece5;margin-bottom:.9rem}
+.pc__media{position:relative;overflow:hidden;aspect-ratio:1/1;background:#f0ecf7;margin-bottom:.9rem;border-radius:16px}
 .pc__media img{width:100%;height:100%;object-fit:cover;transition:.5s}
 .pc:hover .pc__media img{transform:scale(1.04)}
 .pc__media .ph{width:100%;height:100%;display:grid;place-items:center;font-family:var(--serif);font-size:2.4rem;color:#fff}
 .tag{position:absolute;top:.8rem;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;padding:.28rem .55rem;color:#fff}
 .tag.off{left:.8rem;background:var(--danger)}
 .tag.out{left:.8rem;background:#5a544a}
-.tag.new{right:.8rem;background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.tag.new{right:.8rem;background:var(--grad);color:#fff}
 .pc__add{position:absolute;left:0;right:0;bottom:0;background:rgba(26,24,21,.92);color:#fff;border:0;cursor:pointer;
   padding:.75rem;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
   transform:translateY(100%);transition:.28s}
@@ -134,8 +135,9 @@ nav.menu a:hover{color:var(--gold)}
 
 /* SPLIT BANNER */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
-.promo{position:relative;overflow:hidden;aspect-ratio:16/8;display:flex;align-items:center;padding:2.4rem;color:#fff}
-.promo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.62);z-index:0}
+.promo{position:relative;overflow:hidden;aspect-ratio:16/8;display:flex;align-items:center;padding:2.4rem;color:#fff;border-radius:20px}
+.promo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.58) saturate(1.15);z-index:0}
+.promo::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(124,58,237,.55),rgba(236,72,153,.35));z-index:0}
 .promo>div{position:relative;z-index:1}
 .promo .e{font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-2)}
 .promo h3{font-size:2rem;margin:.3rem 0 1rem}
@@ -266,7 +268,7 @@ tr:last-child td{border-bottom:0}
     </div>
   </div>
   <div class="hero-media">
-    <img src="https://picsum.photos/seed/ij-hero/760/950?grayscale" alt="Inversiones Jiménez">
+    <img src="https://picsum.photos/seed/ij-hero/760/950" alt="Inversiones Jiménez">
     <div class="frame"></div>
     <div class="tagcard"><div class="k">Ofertas activas</div><div class="v" id="hero-off">0</div></div>
   </div>
@@ -296,10 +298,10 @@ tr:last-child td{border-bottom:0}
 
 <!-- SPLIT PROMO -->
 <section style="padding:0 0 5rem"><div class="container split">
-  <div class="promo"><img src="https://picsum.photos/seed/ij-promo1/900/460?grayscale" alt="">
+  <div class="promo"><img src="https://picsum.photos/seed/ij-promo1/900/460" alt="">
     <div><span class="e">Nueva temporada</span><h3>Novedades<br>que enamoran</h3>
       <button class="link-u" style="color:#fff;border-color:var(--gold-2)" onclick="setCat('')">Ver todo</button></div></div>
-  <div class="promo"><img src="https://picsum.photos/seed/ij-promo2/900/460?grayscale" alt="">
+  <div class="promo"><img src="https://picsum.photos/seed/ij-promo2/900/460" alt="">
     <div><span class="e">Solo por tiempo limitado</span><h3>Precios<br>especiales</h3>
       <button class="link-u" style="color:#fff;border-color:var(--gold-2)" onclick="document.getElementById('ofertas').scrollIntoView({behavior:'smooth'})">Ver ofertas</button></div></div>
 </div></section>
@@ -429,13 +431,13 @@ tr:last-child td{border-bottom:0}
 </div>
 
 <script>
-const IMG = id => `https://picsum.photos/seed/ij-${id}/600/600?grayscale`;
+const IMG = id => `https://picsum.photos/seed/ij-${id}/600/600`;
 const DEFAULTS = {
   ajustes: { marca:"Inversiones Jiménez", eslogan:"Selección exclusiva", whatsapp:"50495076519", moneda:"L.", ciudad:"Honduras", instagram:"", facebook:"", adminPass:"admin1234" },
   categorias: [
-    { id:"c1", nombre:"Tecnología",  descripcion:"Gadgets y electrónica.", imagen:"https://picsum.photos/seed/ij-cat1/600/700?grayscale" },
-    { id:"c2", nombre:"Hogar",       descripcion:"Todo para tu casa.",      imagen:"https://picsum.photos/seed/ij-cat2/600/700?grayscale" },
-    { id:"c3", nombre:"Accesorios",  descripcion:"Complementos con estilo.",imagen:"https://picsum.photos/seed/ij-cat3/600/700?grayscale" },
+    { id:"c1", nombre:"Tecnología",  descripcion:"Gadgets y electrónica.", imagen:"https://picsum.photos/seed/ij-cat1/600/700" },
+    { id:"c2", nombre:"Hogar",       descripcion:"Todo para tu casa.",      imagen:"https://picsum.photos/seed/ij-cat2/600/700" },
+    { id:"c3", nombre:"Accesorios",  descripcion:"Complementos con estilo.",imagen:"https://picsum.photos/seed/ij-cat3/600/700" },
   ],
   productos: [
     { id:"p1", nombre:"Audífonos Bluetooth Pro", categoria:"c1", precio:890, precioAnterior:1100, stock:14, destacado:true,  descripcion:"Cancelación de ruido, 30 h de batería.", imagen:IMG("p1") },
@@ -465,7 +467,7 @@ const Store = (() => {
 const A=()=>Store.getAjustes();
 const money=n=>`${A().moneda} ${Number(n||0).toLocaleString("es-HN")}`;
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const grad=s=>{let h=0;for(const ch of(s||"x"))h=ch.charCodeAt(0)+((h<<5)-h);const a=Math.abs(h)%360;return `linear-gradient(135deg,hsl(${a},22%,55%),hsl(${(a+30)%360},18%,38%))`;};
+const grad=s=>{let h=0;for(const ch of(s||"x"))h=ch.charCodeAt(0)+((h<<5)-h);const a=Math.abs(h)%360;return `linear-gradient(135deg,hsl(${a},78%,60%),hsl(${(a+35)%360},72%,48%))`;};
 const initials=s=>(s||"?").trim().split(/\s+/).slice(0,2).map(w=>w[0]).join("").toUpperCase();
 const catName=id=>(Store.getCategorias().find(c=>c.id===id)||{}).nombre||"—";
 function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),1800);}
