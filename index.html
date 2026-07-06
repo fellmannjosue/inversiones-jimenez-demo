@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inversiones Jiménez · Boutique</title>
+<title>Inversiones Jiménez · Tienda</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -242,7 +242,7 @@ tr:last-child td{border-bottom:0}
 
 <header class="top"><div class="container top-in">
   <a class="brand" href="#inicio"><span class="logo"><i data-lucide="gem"></i></span>
-    <span><b>Inversiones Jiménez</b><small id="brand-sub">Boutique · Demo</small></span></a>
+    <span><b>Inversiones Jiménez</b><small id="brand-sub">Variedades · Demo</small></span></a>
   <nav class="menu">
     <a href="#categorias">Categorías</a><a href="#ofertas">Ofertas</a>
     <a href="#catalogo">Catálogo</a><a href="#contacto">Contacto</a>
@@ -260,8 +260,8 @@ tr:last-child td{border-bottom:0}
 <section class="hero" id="inicio"><div class="container hero-in">
   <div>
     <span class="eyebrow" id="hero-eslogan">Selección exclusiva</span>
-    <h1>Piezas que <em>elevan</em> tu día a día.</h1>
-    <p>Una selección cuidada de productos, con la atención personal que mereces. Descúbrelos y ordena por WhatsApp.</p>
+    <h1>Todo para tu <em>hogar y escuela</em>.</h1>
+    <p>Productos de limpieza, útiles escolares, papelería y más — a precios que rinden. Haz tu pedido por WhatsApp.</p>
     <div class="cta">
       <a class="btn btn-solid" href="#catalogo"><i data-lucide="arrow-right" style="width:15px;height:15px"></i> Explorar catálogo</a>
       <a class="link-u" id="hero-wa" target="_blank">Escríbenos</a>
@@ -285,14 +285,14 @@ tr:last-child td{border-bottom:0}
 <!-- CATEGORIAS -->
 <section id="categorias" style="padding:5rem 0"><div class="container">
   <div class="sec-head"><span class="eyebrow">Explora</span><h2>Nuestras categorías</h2><div class="rule"></div>
-    <p>Colecciones seleccionadas para ti.</p></div>
+    <p>Encuentra rápido lo que necesitas.</p></div>
   <div class="cats" id="cat-showcase"></div>
 </div></section>
 
 <!-- OFERTAS -->
 <section id="ofertas" style="padding:2rem 0 5rem"><div class="container">
   <div class="sec-head"><span class="eyebrow">Selección</span><h2>Ofertas y destacados</h2><div class="rule"></div>
-    <p>Lo más deseado, a un precio especial.</p></div>
+    <p>Los productos más pedidos, a precio especial.</p></div>
   <div class="grid" id="featured"></div>
 </div></section>
 
@@ -433,24 +433,32 @@ tr:last-child td{border-bottom:0}
 <script>
 const IMG = id => `https://picsum.photos/seed/ij-${id}/600/600`;
 const DEFAULTS = {
-  ajustes: { marca:"Inversiones Jiménez", eslogan:"Selección exclusiva", whatsapp:"50495076519", moneda:"L.", ciudad:"Honduras", instagram:"", facebook:"", adminPass:"admin1234" },
+  ajustes: { marca:"Inversiones Jiménez", eslogan:"Precios que rinden", whatsapp:"50495076519", moneda:"L.", ciudad:"Honduras", instagram:"", facebook:"", adminPass:"admin1234" },
   categorias: [
-    { id:"c1", nombre:"Tecnología",  descripcion:"Gadgets y electrónica.", imagen:"https://picsum.photos/seed/ij-cat1/600/700" },
-    { id:"c2", nombre:"Hogar",       descripcion:"Todo para tu casa.",      imagen:"https://picsum.photos/seed/ij-cat2/600/700" },
-    { id:"c3", nombre:"Accesorios",  descripcion:"Complementos con estilo.",imagen:"https://picsum.photos/seed/ij-cat3/600/700" },
+    { id:"c1", nombre:"Limpieza",         descripcion:"Todo para un hogar impecable.", imagen:"https://picsum.photos/seed/ij-cat1/600/700" },
+    { id:"c2", nombre:"Útiles escolares", descripcion:"Regreso a clases completo.",    imagen:"https://picsum.photos/seed/ij-cat2/600/700" },
+    { id:"c3", nombre:"Papelería",        descripcion:"Cuadernos, papel y más.",       imagen:"https://picsum.photos/seed/ij-cat3/600/700" },
+    { id:"c4", nombre:"Hogar",            descripcion:"Prácticos para el día a día.",  imagen:"https://picsum.photos/seed/ij-cat4/600/700" },
   ],
   productos: [
-    { id:"p1", nombre:"Audífonos Bluetooth Pro", categoria:"c1", precio:890, precioAnterior:1100, stock:14, destacado:true,  descripcion:"Cancelación de ruido, 30 h de batería.", imagen:IMG("p1") },
-    { id:"p2", nombre:"Smartwatch Fit 2",        categoria:"c1", precio:1450, precioAnterior:null, stock:6,  destacado:true,  descripcion:"Monitor de salud y notificaciones.", imagen:IMG("p2") },
-    { id:"p3", nombre:"Lámpara de escritorio",   categoria:"c2", precio:420, precioAnterior:520,  stock:0,  destacado:false, descripcion:"Regulable, 3 tonos de luz.", imagen:IMG("p3") },
-    { id:"p4", nombre:"Set de organizadores",    categoria:"c2", precio:260, precioAnterior:null,  stock:25, destacado:false, descripcion:"Orden para tu espacio.", imagen:IMG("p4") },
-    { id:"p5", nombre:"Mochila antirrobo",       categoria:"c3", precio:780, precioAnterior:950,   stock:9,  destacado:true,  descripcion:"Impermeable, con puerto USB.", imagen:IMG("p5") },
-    { id:"p6", nombre:"Reloj minimalista",       categoria:"c3", precio:640, precioAnterior:null,  stock:18, destacado:false, descripcion:"Diseño sobrio, correa de cuero.", imagen:IMG("p6") },
+    { id:"p1", nombre:"Cloro / Lejía 1 galón",           categoria:"c1", precio:55,  precioAnterior:70,   stock:40,  destacado:true,  descripcion:"Desinfecta y blanquea. Rinde muchísimo.", imagen:IMG("p1") },
+    { id:"p2", nombre:"Detergente en polvo 1 kg",        categoria:"c1", precio:85,  precioAnterior:null, stock:30,  destacado:false, descripcion:"Ropa limpia y con buen aroma.", imagen:IMG("p2") },
+    { id:"p3", nombre:"Lavaplatos líquido 500 ml",       categoria:"c1", precio:42,  precioAnterior:55,   stock:25,  destacado:false, descripcion:"Corta la grasa al instante.", imagen:IMG("p3") },
+    { id:"p4", nombre:"Desinfectante multiusos 1 L",     categoria:"c1", precio:68,  precioAnterior:null, stock:18,  destacado:false, descripcion:"Aroma fresco para toda la casa.", imagen:IMG("p4") },
+    { id:"p5", nombre:"Cuaderno universitario 100 hojas",categoria:"c2", precio:38,  precioAnterior:null, stock:120, destacado:true,  descripcion:"Rayado, tapa dura resistente.", imagen:IMG("p5") },
+    { id:"p6", nombre:"Caja de colores x12",             categoria:"c2", precio:65,  precioAnterior:80,   stock:50,  destacado:true,  descripcion:"Colores vivos, no tóxicos.", imagen:IMG("p6") },
+    { id:"p7", nombre:"Mochila escolar",                 categoria:"c2", precio:480, precioAnterior:590,  stock:12,  destacado:true,  descripcion:"Amplia, resistente y cómoda.", imagen:IMG("p7") },
+    { id:"p8", nombre:"Resma de papel bond carta",       categoria:"c3", precio:120, precioAnterior:null, stock:22,  destacado:false, descripcion:"500 hojas, 75 g. Para imprimir.", imagen:IMG("p8") },
+    { id:"p9", nombre:"Bolígrafos (caja x12)",           categoria:"c3", precio:55,  precioAnterior:null, stock:40,  destacado:false, descripcion:"Tinta azul, escritura suave.", imagen:IMG("p9") },
+    { id:"p10",nombre:"Escoba plástica",                 categoria:"c4", precio:75,  precioAnterior:null, stock:0,   destacado:false, descripcion:"Cerdas firmes, mango largo.", imagen:IMG("p10") },
+    { id:"p11",nombre:"Set 3 recipientes herméticos",    categoria:"c4", precio:145, precioAnterior:180,  stock:20,  destacado:false, descripcion:"Guarda alimentos frescos.", imagen:IMG("p11") },
   ],
 };
 
 const Store = (() => {
   const K = { prod:"ij_productos", cat:"ij_categorias", cart:"ij_carrito", set:"ij_ajustes" };
+  // Reseteo de catálogo demo: si cambia la versión, vuelve a los productos/categorías por defecto.
+  try{ const DV="2"; if(localStorage.getItem("ij_seed_ver")!==DV){ localStorage.removeItem(K.prod); localStorage.removeItem(K.cat); localStorage.setItem("ij_seed_ver",DV);} }catch(e){}
   const clon = x => JSON.parse(JSON.stringify(x));
   const leer = (k,def) => { try{const v=localStorage.getItem(k);return v?JSON.parse(v):clon(def);}catch(e){return clon(def);} };
   const escribir = (k,v) => { try{localStorage.setItem(k,JSON.stringify(v));return true;}catch(e){alert("Almacenamiento lleno.");return false;} };
